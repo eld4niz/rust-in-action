@@ -156,4 +156,16 @@ match value {
     _ => println!("many"),
 }
 ```
-`match` is analogous to the switch keyword in other languages. Unlike C’s `switch`, however, match guarantees that all possible options for a type are explicitly handled. 
+`match` is analogous to the switch keyword in other languages. Unlike C’s `switch`, however, match guarantees that all possible options for a type are explicitly handled.
+
+## Defining Functions
+
+Rust’s functions require that you specify your parameter’s types and the function’s return type. This is the foundational knowledge that we’ll need for the majority of our work with Rust.
+
+### Using references
+A reference is a value that stands in place for another value. For example, imagine that variable *a* is a large array that is costly to duplicate. In some sense, a reference *r* is a cheap copy of *a*. But instead of creating a duplicate, the program stores a’s address in memory. When the data from a is required, *r* can be dereferenced to make a available.
+
+### Generic Functions
+Capital letters in place of a type indicate a generic type. Conventionally, the variables T, U, and V are used as placeholder values, but this is arbitrary. E is often used to denote an error type.
+
+
