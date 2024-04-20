@@ -168,4 +168,20 @@ A reference is a value that stands in place for another value. For example, imag
 ### Generic Functions
 Capital letters in place of a type indicate a generic type. Conventionally, the variables T, U, and V are used as placeholder values, but this is arbitrary. E is often used to denote an error type.
 
+## List of Things
+
+### Arrays
+[T; n] describes an array’s type, where T is the elements’ type and n is a non-negative integer. [f32; 12] denotes an array of 12 32-bit floating-point numbers. 
+It’s easy to get confused with slices [T], which do not have a compile-time length.
+
+Rust maintains its focus on safety. Array indexing is bounds checked. Requesting an
+item that’s out of bounds crashes (panics in Rust terminology) the program rather
+than returning erroneous data.
+
+### Slices
+Slices are dynamically sized array-like objects. The term dynamically sized means that
+their size is not known at compile time. Yet, like arrays, these don’t expand or contract.
+
+The lack of compile-time knowledge explains the distinction in the type signature between an array ([T; n]) and a slice ([T]).
+
 
